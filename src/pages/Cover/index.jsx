@@ -6,7 +6,7 @@ const Cover = () => {
   const { name } = useParams();
   const navigate = useNavigate();
   const decodedName = decodeURIComponent(name).replace(/\+/g, " ");
-  const hideCover = () => { navigate(`/${name}/mainpage`) };
+  const hideCover = () => { navigate(`/${name}/main`) };
   
   return (
     <section className={`${style.bgCover} vh-100 d-flex flex-column justify-content-around align-items-center text-center`}>
@@ -19,9 +19,10 @@ const Cover = () => {
       <div className={`text-white ${style.width50} text-center `} style={{zIndex: 10}}>
           <p className="mb-0 cormorant-garamond fst-italic">Dear</p>
           <div className={`d-flex justify-content-center align-content-center py-3 rounded-3 my-3 ${ style.glass }`}>
-              {decodedName}
+              <p className="fs-4 m-0">{ decodedName }</p>
           </div>
-          <button className={`btn d-flex justify-content-between align-items-center mx-auto gap-2  ${style.buttonColor} text-white px-3`} type="button" onClick={ hideCover }>
+
+          <button className={`btn d-flex justify-content-between align-items-center mx-auto gap-2  ${style.buttonColor} text-white px-3 shadows`} type="button" onClick={ hideCover }>
             <BsFillDoorOpenFill />
             <p className="m-0">Buka Undangan</p>
           </button>

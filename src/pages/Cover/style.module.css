@@ -1,8 +1,8 @@
 .bgCover{
-    background-image: url('../../assets/bgcover.png');
+    background-image: url('../../assets/4.jpg');
     background-position: center;
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 .bgCover::before {
     content: "";
@@ -11,7 +11,7 @@
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     z-index:0;
 }
 .width50{

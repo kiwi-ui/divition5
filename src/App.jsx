@@ -1,7 +1,14 @@
+import WelcomePageFooter from "./components/WelcomePageFooter"
+import Couple from "./pages/Couple"
+import WelcomePage from "./pages/WelcomePage"
 
 function App() {
   return (
-    <div>this is app</div>
+    <>
+      <WelcomePage />
+      <WelcomePageFooter />
+      <Couple />
+    </>
   )
 }
 
