@@ -1,0 +1,32 @@
+.bgGradient{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0.783),black);
+}
+.bg {
+    position: relative;
+    overflow: hidden;
+}
+.image {
+    width: 100%;
+    transition: opacity 1.5s ease-in-out;
+}
+.image.active {
+    opacity: 1;
+}
+.outlineIn{
+    outline: 1px solid white;
+    outline-offset: -8px;
+}
+.divider::after{
+    display: block;
+    content: "";
+    border-block-end: 0;
+    flex-grow: 1;
+    border-block-end: 1px solid white;
+}
+.divider::before{
+    display: block;
+    content: "";
+    border-block-start: 0;
+    flex-grow: 1;
+    border-block-start: 1px solid white;
+}

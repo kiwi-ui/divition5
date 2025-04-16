@@ -24,14 +24,16 @@ const WelcomePage = () => {
 
     return (
         <section className='d-flex position-fixed vh-100 align-items-center flex-wrap'>
-            <div className={`${style.bg}  vh-100 vw-100 top-0`}>
-                {images.map((image, index) => (
-                    <div
-                    key={image.id}
-                        className={`${style.image} ${index === photo ? style.active : ''}`}
-                        style={{ backgroundImage: `url('${image.url}')` }}
-                    />
-                ))}
+            <div className={`${ style.bg }  vh-100 vw-100 top-0`}>
+                {
+                    images.map((image, index) => (
+                        <div
+                            key={ image.id }
+                            className={ `${style.image} ${index === photo ? style.active : ''}` }
+                            style={{ backgroundImage: `url('${image.url}')` }}
+                        />
+                    ))
+                }
             </div>
         </section>
     );

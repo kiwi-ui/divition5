@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+img:hover {cursor: pointer;}
+.bgColorPrimary { background-color: #F1D6AB;}
+.alexBrush {
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+

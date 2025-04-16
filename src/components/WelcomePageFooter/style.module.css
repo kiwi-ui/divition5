@@ -1,3 +1,6 @@
 .grad {
-    background: linear-gradient(180deg, #FFFFFF00 2%, #FFFFFF 100%);;
+    background: linear-gradient(180deg, #FFFFFF00 0.5%, #FFFFFF 100%);
+}
+.buttonColor{
+    background-color: #A78556 !important;
 }

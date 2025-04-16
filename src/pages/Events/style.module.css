@@ -1,0 +1,43 @@
+.carouselTrack {
+    animation: slide 10s;
+    animation-iteration-count: infinite;
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+.carouselCard {
+    &:hover {
+        transform: scale(0.9);
+        box-shadow: 5px 5px 8px rgba(222, 222, 222, 0.362),
+        10px 10px 8px rgba(152, 133, 133, 0.392),
+        15px 15px 8px rgba(139, 154, 139, 0.303);
+    }
+    outline: 2px solid white;
+    outline-offset: -8px;
+}
+@media only screen and (max-width: 700px) {
+    .carouselCard{
+        width: 75% !important;
+    }
+}
+
+@keyframes slide {
+    0% {
+        left: -2%;
+    }
+    50% {
+        left:-45%;
+    }
+    100% {
+        left: -2%;
+    }
+}
+.layer::before  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #FFFFFF00 0.5%, #FFFFFF 100%);
+}

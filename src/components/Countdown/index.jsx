@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import style from './style.module.css';
 // import Slide from '../../assets/animation';
 // import font from '../../fonts.module.css';
+import '../../App.css';
+import { motion } from 'motion/react';
 
 const Countdown = () => {
     const [event, setEvent] = useState({
@@ -31,35 +33,97 @@ const Countdown = () => {
     }, [])
 
     return (
-        <section id="date" className="border-0 position-relative" style={{  overflowX:'hidden' }}>
-            {/* <Slide delay={2}> */}
+        <section id="date" className="border-0 position-relative py-2" style={{  overflowX:'hidden' }}>
                 <div className="row justify-content-center">
                     {!isEventOver ?
                         <div className={`row text-white`}>
-                            <div className="col-3 ">
-                                <div className={` border border-1 bg-success px-4 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow-sm`}>
-                                    <p className={` fw-bold fs-5 pt-1 mb-0`}>{event.days}</p>
-                                    <p className={` fw-semibold m-0 pb-1`} style={{fontSize:'0.7rem'}}>Hari</p>
+                            <motion.div 
+                                className="col-3"
+                                initial={{ 
+                                    translateX: '5rem',
+                                    opacity: 0
+                                }}
+                                whileInView={{ 
+                                    translateX: '0rem',
+                                    opacity: 1
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    ease: 'easeOut'
+                                }}
+                                viewport={{once: true}}
+                            >
+                                <div className={` border border-3 px-4 text-center d-flex align-items-center flex-column rounded-2 shadow-sm ${style.countdown}`}>
+                                    <p className={` fw-bold fs-5 pt-1 mb-0 dm-sans `}>{event.days}</p>
+                                    <p className={` fw-semibold m-0 pb-1 cormorant-upright fs-5 `} style={{fontSize:'0.7rem'}}>Hari</p>
                                 </div>
-                            </div>
-                            <div className="col-3 ">
-                                <div className={` border border-1 bg-success px-4 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow-sm`}>
-                                    <p className={` fw-bold fs-5 pt-1 mb-0`}>{event.hours}</p>
-                                    <p className={` fw-semibold m-0 pb-1`} style={{fontSize:'0.7rem'}}>Jam</p>
+                            </motion.div>
+                            
+                            <motion.div 
+                                className="col-3"
+                                initial={{ 
+                                    translateX: '-5rem',
+                                    opacity: 0
+                                }}
+                                whileInView={{ 
+                                    translateX: '0rem',
+                                    opacity: 1
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    ease: 'easeOut'
+                                }}
+                                viewport={{once: true}}
+                            >
+                                <div className={` border border-3 px-4 text-center d-flex align-items-center flex-column rounded-2 shadow-sm ${style.countdown}`}>
+                                    <p className={` fw-bold fs-5 pt-1 mb-0 dm-sans `}>{event.hours}</p>
+                                    <p className={` fw-semibold m-0 pb-1 cormorant-upright fs-5 `} style={{fontSize:'0.7rem'}}>Jam</p>
                                 </div>
-                            </div>
-                            <div className="col-3 ">
-                                <div className={` border border-1 bg-success px-4 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow-sm`}>
-                                    <p className={` fw-bold fs-5 pt-1 mb-0`}>{event.minutes}</p>
-                                    <p className={` fw-semibold m-0 pb-1`} style={{fontSize:'0.7rem'}}>Menit</p>
+                            </motion.div>
+                            
+                            <motion.div 
+                                className="col-3"
+                                initial={{ 
+                                    translateX: '5rem',
+                                    opacity: 0
+                                }}
+                                whileInView={{ 
+                                    translateX: '0rem',
+                                    opacity: 1
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    ease: 'easeOut'
+                                }}
+                                viewport={{once: true}}
+                            >
+                                <div className={` border border-3 px-4 text-center d-flex align-items-center flex-column rounded-2 shadow-sm ${style.countdown}`}>
+                                    <p className={` fw-bold fs-5 pt-1 mb-0 dm-sans `}>{event.minutes}</p>
+                                    <p className={` fw-semibold m-0 pb-1 cormorant-upright fs-5 `} style={{fontSize:'0.7rem'}}>Menit</p>
                                 </div>
-                            </div>
-                            <div className="col-3 ">
-                                <div className={` border border-1 bg-success px-4 ${style.bgCountdown} text-center d-flex align-items-center flex-column rounded-2 shadow-sm`}>
-                                    <p className={` fw-bold fs-5 pt-1 mb-0`}>{event.seconds}</p>
-                                    <p className={` fw-semibold m-0 pb-1`} style={{fontSize:'0.7rem'}}>Detik</p>
+                            </motion.div>
+
+                            <motion.div 
+                                className="col-3"
+                                initial={{ 
+                                    translateX: '-5rem',
+                                    opacity: 0
+                                }}
+                                whileInView={{ 
+                                    translateX: '0rem',
+                                    opacity: 1
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    ease: 'easeOut'
+                                }}
+                                viewport={{once: true}}
+                            >
+                                <div className={` border border-3 px-4 text-center d-flex align-items-center flex-column rounded-2 shadow-sm ${style.countdown}`}>
+                                    <p className={` fw-bold fs-5 pt-1 mb-0 dm-sans `}>{event.seconds}</p>
+                                    <p className={` fw-semibold m-0 pb-1 cormorant-upright fs-5 `} style={{fontSize:'0.7rem'}}>Detik</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                         :
                         <div>
@@ -67,7 +131,6 @@ const Countdown = () => {
                         </div>
                     }
                 </div>
-            {/* </Slide> */}
         </section>
     )
 }
