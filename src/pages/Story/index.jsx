@@ -35,13 +35,13 @@ const Story = () => {
                 </span>
             </motion.div>
             
-            <div className="d-flex flex-row align-items-baseline container pt-4 pb-4">
-                <div className="d-flex m-0 pe-0">
-                    <img className="w-100" src={ photo1 } alt="story groom"  />
+            <div className={ `d-flex flex-row  container pt-4 pb-4` }>
+                <div className={`d-flex justify-content-end m-0 pe-0 align-items-start position-relative mb-5`}>
+                    <img className={`w-75 rounded-5 ${style.outlineIn}`} src={ photo1 } alt="story groom"  />
                 </div>
 
-                <div className="m-0  ps-0" >
-                    <img className="w-100" src={ photo2 } alt="story groom" />
+                <div className={`d-flex justify-content-start align-items-end ps-0 position-relative ${ style.MinusMargin3 }`} >
+                    <img className={`w-75 rounded-5 ${style.outlineIn}`} src={ photo2 } alt="story groom" />
                 </div>
             </div>
             

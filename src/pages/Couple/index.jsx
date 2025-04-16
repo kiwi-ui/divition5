@@ -14,36 +14,36 @@ const Couple = () => {
                 <motion.p 
                     className='fs-1 cormorant-upright fw-semibold' style={{ letterSpacing: '0.4rem' }}
                     initial={{ 
-                        translateX: '-5rem',
+                        scale: 0,
                         opacity: 0
                       }}
                       whileInView={{ 
-                        translateX: '0rem',
+                        scale: 1,
                         opacity: 1
                       }}
                       transition={{
                           duration: 2,
                           ease: 'easeOut'
                       }}
-                      viewport={{once: true}}
+                      viewport={{ once: true }}
                 >The Bride & Groom</motion.p>
 
                 <motion.p 
                     className='cormorant-garamond' 
                     style={{ color: '#585656' }}
                     initial={{ 
-                        translateX: '5rem',
+                        scale: 0,
                         opacity: 0
                       }}
                       whileInView={{ 
-                        translateX: '0rem',
+                        scale: 1,
                         opacity: 1
                       }}
                       transition={{
                           duration: 2,
                           ease: 'easeOut'
                       }}
-                      viewport={{once: true}}
+                      viewport={{ once: true }}
                 >
                     Bismillahirrahmanirrahim
                     Assalamualaikum Warahmatullahi Wabarakatuh.

@@ -130,7 +130,7 @@ const Closing = () => {
                 }}
                 viewport={{ once: true }}
             >Made with love by Divition</motion.p>
-            {/* <img src={dvt} className="w-25 rounded-circle py-4" alt="divition" /> */}
+
             <div className="position-relative d-flex gap-3 justify-content-center">
                 <motion.div
                     initial={{ 
@@ -147,6 +147,7 @@ const Closing = () => {
                 >
                     <BsInstagram className="fs-1 " />
                 </motion.div>
+                
                 <motion.div
                     initial={{ 
                         translateX:'10rem'

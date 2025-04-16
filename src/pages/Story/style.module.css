@@ -12,3 +12,10 @@
     flex-grow: 1;
     border-block-start: 1px solid black;
 }
+.MinusMargin3 {
+    margin-left: -3rem;
+}
+.outlineIn{
+    outline: 1px solid white;
+    outline-offset: -14px;
+}

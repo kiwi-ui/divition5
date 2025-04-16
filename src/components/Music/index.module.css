@@ -1,0 +1,7 @@
+.z10 {z-index: 100};
+button:focus {border: 0;}
+.color{color:#A78556}
+.buttonHover:hover{
+    color: #A78556 !important;
+    background-color: transparent !important;
+}
