@@ -8,6 +8,7 @@ import { motion } from 'motion/react';
 
 const Couple = () => {
   return (
+    
     <section className="position-relative bg-white py-5">
         <div className="container text-center">
             <div className='py-5'>
@@ -67,7 +68,7 @@ const Couple = () => {
                 viewport={{once: true}}
             >
                 <motion.img 
-                    className={`w-50 outline ${style.outlineIn}`} src={groom} alt="groom" 
+                    className={`${style.coupleImg} outline ${style.outlineIn}`} src={groom} alt="groom" 
                     initial={{ 
                         opacity: 0,
                         scale: 0
@@ -198,7 +199,7 @@ const Couple = () => {
                   viewport={{once: true}}
             >
                 <motion.img 
-                    className={`w-50 outline ${style.outlineIn}`} src={bride} 
+                    className={`${style.coupleImg} outline ${style.outlineIn}`} src={bride} 
                     initial={{ 
                         opacity: 0,
                         scale: 0
