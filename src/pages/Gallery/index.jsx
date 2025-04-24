@@ -9,18 +9,17 @@ import ModalImage from '../../components/ModalImage';
 import { AnimatePresence } from 'motion/react';
 import { motion } from 'motion/react';
 
-const Gallery = () => {
+const Gallery = ({ isPhotoClicked, setisPhotoClicked, clickedPhoto, setClickedPhoto }) => {
     const galleryImages = [{img: g1},{img: g2},{img: g3},{img: g4},{img: g5},{img: g6}]
-    const [isPhotoClicked, setisPhotoClicked] = useState(false)
-    const [clickedPhoto, setClickedPhoto] = useState('')
     const showImage = (param) => {
-        setisPhotoClicked(!isPhotoClicked);
+        setisPhotoClicked(true);
         setClickedPhoto(param.target.src);
     }
 
     return (
         <>
-            <ModalImage toggle={ isPhotoClicked } setToggle={ setisPhotoClicked } clickedPhoto={ clickedPhoto }/>
+            <ModalImage isPhotoClicked={ isPhotoClicked } setisPhotoClicked={ setisPhotoClicked } clickedPhoto={ clickedPhoto }/>
+            
             <section id="gallery" className={ `gallery position-relative bg-body-secondary` } style={{overflowX: 'hidden'}}>
                 <div className="container py-5 text-black">
                     <motion.div 
@@ -76,9 +75,6 @@ const Gallery = () => {
                                             transition={{
                                                 duration: 2,
                                                 ease: 'easeOut'
-                                            }}
-                                            whileTap={{
-                                                scale: 10
                                             }}
                                             viewport={{ once: true }}
                                         />

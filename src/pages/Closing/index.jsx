@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import style from './style.module.css';
 import { BsInstagram, BsWhatsapp } from 'react-icons/bs';
 import img1 from '../../assets/6.jpg';
@@ -27,7 +27,7 @@ const Closing = () => {
   return (
     <section className={`${ style.bgGradient } position-relative py-5`}>
         <motion.div 
-            className={`${style.divider} mb-2 d-flex gap-4 text-center mx-4  justify-content-center align-items-center`}
+            className={`${ style.divider } mb-2 d-flex gap-4 text-center mx-4  justify-content-center align-items-center`}
             initial={{ 
                 scale: 0,
                 opacity: 0
@@ -52,7 +52,7 @@ const Closing = () => {
         <div className={`container text-white py-3`}>
             <div className="d-flex align-items-center justify-content-evenly text-center flex-column h-100">
                 <motion.img 
-                    className={`w-50 ${style.outlineIn} rounded-2 mb-4`} src={photo[index].url}
+                    className={ `${ style.closingImg } ${ style.outlineIn } rounded-2 mb-4` } src={ photo[index].url }
                     initial={{ 
                         scale: 0,
                         opacity: 0
@@ -114,8 +114,10 @@ const Closing = () => {
         </motion.div>
         
         <div className="container text-white text-center py-3">
+            <a className="text-white" href="https://www.instagram.com/yusnianggara/" target='_blank' rel="noreferrer">Music By : Aladdin - A Whole New World | Epic Orchestra</a>
+            
             <motion.p 
-                className="m-0 pb-4"
+                className="m-0 pb-4 mt-4"
                 initial={{ 
                     scale: 0,
                     opacity: 0
@@ -132,7 +134,11 @@ const Closing = () => {
             >Made with love by Divition</motion.p>
 
             <div className="position-relative d-flex gap-3 justify-content-center">
-                <motion.div
+                <motion.a
+                    className="text-white"
+                    href="https://www.instagram.com/yusnianggara/"
+                    target='_blank' 
+                    rel="noreferrer"
                     initial={{ 
                         translateX:'-10rem'
                     }}
@@ -146,9 +152,13 @@ const Closing = () => {
                     viewport={{ once: true }}
                 >
                     <BsInstagram className="fs-1 " />
-                </motion.div>
+                </motion.a>
                 
-                <motion.div
+                <motion.a
+                    className="text-white"
+                    href="https://www.instagram.com/yusnianggara/"
+                    target='_blank' 
+                    rel="noreferrer"
                     initial={{ 
                         translateX:'10rem'
                     }}
@@ -162,7 +172,7 @@ const Closing = () => {
                     viewport={{ once: true }}
                 >
                     <BsWhatsapp className="fs-1 "/>
-                </motion.div>
+                </motion.a>
             </div>
         </div>
     </section>

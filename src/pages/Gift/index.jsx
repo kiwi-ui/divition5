@@ -65,7 +65,7 @@ const Gift = () => {
     <section className="position-relative layer">
         <div className="container pt-5">
 
-            <div className="text-white text-center position-relative pb-5" style={{ zIndex: 10 }}>
+            <div className="text-white text-center position-relative pb-5" style={{ zIndex: 0 }}>
                 <motion.p 
                     className="text-center text-white m-0" 
                     style={{ fontSize: '1.5rem', letterSpacing: '0.6rem' }}
@@ -101,7 +101,7 @@ const Gift = () => {
                     viewport={{ once: true }}
                 >
                     <span >
-                        <span className='fs-2'>
+                        <span className='fs-3'>
                             <GiFallingLeaf />
                         </span>
                     </span>
@@ -123,14 +123,14 @@ const Gift = () => {
                     viewport={{ once: true }}
                 >
                     <p className="px-4 pb-3">Kehadiran Bapak/Ibu/Saudara/i merupakan suatu tanda kasih bagi kami. Apabila ingin memberi tanda kasih dalam bentuk lain, Anda dapat memberi tanda kasih melalui:</p>
-                    <button className={`btn bgButton d-flex justify-content-between align-items-center mx-auto gap-2 text-white px-3 shadows`} type="button" onClick={ hideCards }>
+                    <button className={`btn ${ style.bgButton } d-flex justify-content-between align-items-center mx-auto gap-2 text-white px-3 shadows`} type="button" onClick={ hideCards }>
                         <BsFillDoorOpenFill />
                         <p className="m-0">Buka Undangan</p>
                     </button>
                 </motion.div>
             </div>
 
-            <div className="text-white text-center position-relative pb-5" style={{zIndex: 10}}>
+            <div className="text-white text-center position-relative pb-5">
                 <motion.p 
                     className="text-center text-white m-0" 
                     style={{fontSize: '1.5rem', letterSpacing: '0.6rem'}}
@@ -166,7 +166,7 @@ const Gift = () => {
                     viewport={{ once: true }}
                 >
                     <span >
-                        <span className='fs-2'>
+                        <span className='fs-3'>
                             <GiFallingLeaf />
                         </span>
                     </span>
@@ -265,7 +265,7 @@ const Gift = () => {
                                 }}
                                 viewport={{ once: true }}
                             >
-                                <a href='blank' type="submit" className={`btn px-3 position-relative rounded-2 border-0 text-white fw-semibold btn ${isLoading ? 'disabled' : '' } bgButton`} aria-disabled="true" onClick={ handleSubmit }>
+                                <a href='blank' type="submit" className={`btn px-3 ${style.bgButton}  position-relative rounded-2 border-0 text-white fw-semibold btn ${isLoading ? 'disabled' : '' } bgButton`} aria-disabled="true" onClick={ handleSubmit }>
                                     { 
                                         isLoading ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> 
                                         : 
