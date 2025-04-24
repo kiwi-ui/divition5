@@ -26,17 +26,7 @@ function App() {
     <body className={` ${ isPhotoClicked ? 'overflow-y-hidden' : 'overflow-y-scroll'  } `}>
       <WelcomePage />
       <WelcomePageFooter />
-
-      <motion.div ref={ constraintDrag }>
-        <motion.div
-          drag
-          dragConstraints={ constraintDrag }
-          dragElastic= {0.5}
-          >
-          <Music />
-        </motion.div>
-      </motion.div>
-
+      <Music />
       <Card isModalShown={ isModalShown } toggleModal={ toggleModal }  />
       <Couple />
       <Events />
