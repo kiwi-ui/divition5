@@ -4,11 +4,7 @@ import { GiFallingLeaf } from 'react-icons/gi';
 import style from './style.module.css';
 import { motion } from 'motion/react';
 
-const Gift = () => {
-    const hideCards = () => {
-        console.log('coba')
-    }
-
+const Gift = ({toggleModal}) => {
     const [formData, setFormData] = useState({
         name: '',
         harapan: '',
@@ -64,72 +60,6 @@ const Gift = () => {
   return (
     <section className="position-relative layer">
         <div className="container pt-5">
-
-            <div className="text-white text-center position-relative pb-5" style={{ zIndex: 0 }}>
-                <motion.p 
-                    className="text-center text-white m-0" 
-                    style={{ fontSize: '1.5rem', letterSpacing: '0.6rem' }}
-                    initial={{ 
-                        translateY:'-10rem',
-                        scale: 0
-                    }}
-                    whileInView={{ 
-                        translateY:'0rem',
-                        scale: 1
-                    }}
-                    transition={{
-                        duration: 2,
-                        ease: 'easeOut'
-                    }}
-                    viewport={{ once: true }}
-                > WEDDING GIFT</motion.p>
-                
-                <motion.div 
-                    className={`${style.divider} mb-2 d-flex gap-4 text-center mx-4  justify-content-center align-items-center`}
-                    initial={{ 
-                        scale: 0,
-                        opacity: 0
-                    }}
-                    whileInView={{ 
-                        scale: 1,
-                        opacity: 1
-                    }}
-                    transition={{
-                        duration: 3.5,
-                        ease: 'easeOut'
-                    }}
-                    viewport={{ once: true }}
-                >
-                    <span >
-                        <span className='fs-3'>
-                            <GiFallingLeaf />
-                        </span>
-                    </span>
-                </motion.div>
-                
-                <motion.div 
-                    initial={{ 
-                        scale: 0,
-                        opacity: 0
-                    }}
-                    whileInView={{ 
-                        scale: 1,
-                        opacity: 1
-                    }}
-                    transition={{
-                        duration: 3.5,
-                        ease: 'easeOut'
-                    }}
-                    viewport={{ once: true }}
-                >
-                    <p className="px-4 pb-3">Kehadiran Bapak/Ibu/Saudara/i merupakan suatu tanda kasih bagi kami. Apabila ingin memberi tanda kasih dalam bentuk lain, Anda dapat memberi tanda kasih melalui:</p>
-                    <button className={`btn ${ style.bgButton } d-flex justify-content-between align-items-center mx-auto gap-2 text-white px-3 shadows`} type="button" onClick={ hideCards }>
-                        <BsFillDoorOpenFill />
-                        <p className="m-0">Buka Undangan</p>
-                    </button>
-                </motion.div>
-            </div>
-
             <div className="text-white text-center position-relative pb-5">
                 <motion.p 
                     className="text-center text-white m-0" 

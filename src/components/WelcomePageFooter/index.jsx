@@ -4,6 +4,7 @@ import style from './style.module.css';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import '../../App.css';
 import { motion } from "motion/react";
+import Calendar from '../Calendar';
 
 const WelcomePageFooter = () => {
   return (
@@ -32,7 +33,7 @@ const WelcomePageFooter = () => {
             <Countdown />
 
             <motion.button 
-              className={`d-flex justify-content-between align-items-center mx-auto gap-2 btn text-white px-3 shadows ${ style.buttonColor }`} 
+              className={`d-flex justify-content-between align-items-center mx-auto gap-2 btn text-white px-3 shadows`} 
               type="button"
               initial={{ 
                 translateX: '5rem',
@@ -48,8 +49,7 @@ const WelcomePageFooter = () => {
               }}
               viewport={{once: true}}
             >
-              <BsCalendarCheckFill />
-              <p className="m-0 fw-semibold fs-5 dm-sans">ADD TO CALENDAR</p>
+              <Calendar />
             </motion.button>
             <motion.div
               initial={{ 
