@@ -42,8 +42,8 @@ const Music = () => {
     }, [isPlaying]);
 
     return (
-        <div className={ ` ${style.buttonHover} position-fixed text-center text-white end-0 me-3 mt-3 top-0` } onClick={toggleSong}>
-            <button className={ ` ${style.buttonHover} d-flex align-items-center justify-items-center m-0 my-3 mx-1 position-relative bg-transparent rounded-circle border-0` } style={{ color: '#A78556 ' }}>
+        <div className={ ` ${ style.buttonHover } text-center text-white end-0 me-3 mt-3 top-0 music position-fixed` } onClick={ toggleSong } style={{zIndex: 100}}>
+            <button className={ ` ${ style.buttonHover } d-flex align-items-center justify-items-center m-0 my-3 mx-1 position-relative bg-transparent rounded-circle border-0` } style={{ color: '#A78556 ' }}>
                 {!isPlaying ? <BsPauseCircleFill className="bg-transparent rounded-circle fs-1" /> : <BsPlayCircleFill className="bg-transparent rounded-circle fs-1" />}
             </button>
         </div>

@@ -8,7 +8,7 @@ import { motion } from 'motion/react';
 
 const Couple = () => {
   return (
-    <section className='position-relative bg-white py-5'>
+    <section className="position-relative bg-white py-5">
         <div className="container text-center">
             <div className='py-5'>
                 <motion.p 
